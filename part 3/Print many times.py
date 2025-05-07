@@ -2,13 +2,19 @@
 def chessboard(times):
     for i in range(times):
         for j in range(times):
-            if i % 2 == 0 or j % 2 == 0:
-                print("1", end="")
+            if i % 2 == 0:
+                if j% 2 == 0:
+                    print("1",end="")
+                else:
+                    print("0",end="")
             else:
-                print("0", end="")
+                if j % 2 != 0:
+                    print("1", end="")
+                else:
+                    print(0, end="")
         print()
 
 
 # Testing the function
 if __name__ == "__main__":
-    chessboard(3)
+    chessboard(5)
